@@ -1,26 +1,45 @@
-"""Python inspection/code generation API."""
+from .core import (
+    SHORTHAND_KEYS,
+    display_traceback,
+    infer_encoding_types,
+    infer_vegalite_type_for_pandas,
+    parse_shorthand,
+    sanitize_narwhals_dataframe,
+    sanitize_pandas_dataframe,
+    update_nested,
+    use_signature,
+)
+from .deprecation import AltairDeprecationWarning, deprecated, deprecated_warn
+from .html import spec_to_html
+from .plugin_registry import PluginRegistry
+from .schemapi import (
+    VERSIONS,
+    Optional,
+    SchemaBase,
+    SchemaLike,
+    Undefined,
+    is_undefined,
+)
 
-from __future__ import annotations
-
-from .code import Code
-from .code import ExceptionInfo
-from .code import filter_traceback
-from .code import Frame
-from .code import getfslineno
-from .code import Traceback
-from .code import TracebackEntry
-from .source import getrawcode
-from .source import Source
-
-
-__all__ = [
-    "Code",
-    "ExceptionInfo",
-    "Frame",
-    "Source",
-    "Traceback",
-    "TracebackEntry",
-    "filter_traceback",
-    "getfslineno",
-    "getrawcode",
-]
+__all__ = (
+    "SHORTHAND_KEYS",
+    "VERSIONS",
+    "AltairDeprecationWarning",
+    "Optional",
+    "PluginRegistry",
+    "SchemaBase",
+    "SchemaLike",
+    "Undefined",
+    "deprecated",
+    "deprecated_warn",
+    "display_traceback",
+    "infer_encoding_types",
+    "infer_vegalite_type_for_pandas",
+    "is_undefined",
+    "parse_shorthand",
+    "sanitize_narwhals_dataframe",
+    "sanitize_pandas_dataframe",
+    "spec_to_html",
+    "update_nested",
+    "use_signature",
+)
