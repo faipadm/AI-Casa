@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "planta-agent"
+version = "0.1.0"
+description = "Agente para gerar plantas de casas a partir de prompts"
+authors = [
+    { name = "Usuário", email = "user@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "ezdxf",
+    "matplotlib",
+    "Pillow",
+    "openai",
+    "requests",
+    "fastapi",
+    "uvicorn",
+]
+
+[project.urls]
+"Homepage" = "https://example.com"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.scripts]
+planta-agent = "agent.main:main"

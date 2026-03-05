@@ -1,0 +1,13 @@
+ezdxf
+matplotlib
+Pillow
+openai
+requests
+pytest
+fastapi
+uvicorn
+streamlit
+beautifulsoup4
+moviepy
+pandas
+openpyxl
